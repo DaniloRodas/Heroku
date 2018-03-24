@@ -14,6 +14,6 @@ app.get('/star_wars_episode/:episode_number?', function(req, res) {
 	res.send('This is the page for episode ' + req.params.episode_number);
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
 	console.log('The application is running on port 3000');
 });
